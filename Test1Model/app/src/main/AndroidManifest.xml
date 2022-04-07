@@ -9,8 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Test1Model">
+        <service
+            android:name=".Test1ModelService"
+            android:enabled="true"
+            android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Test1ModelSecondActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="ro.pub.cs.systems.eim.test1model.Test1ModelSecondActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Test1ModelMainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
